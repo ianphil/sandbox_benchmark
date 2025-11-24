@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+.env
+
+# Benchmark outputs (regenerated on each run)
+benchmark_logs_*/
+evaluations_*/
+
+# OS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# uv
+.python-version

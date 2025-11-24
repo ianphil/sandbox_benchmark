@@ -1,0 +1,24 @@
+POST http://localhost:8000/execute
+Content-Type: application/json
+
+{
+    "code": "print('Hello, World!')"
+}
+
+###
+
+POST http://localhost:8000/execute
+Content-Type: application/json
+
+{
+    "code": "1/0"
+}
+
+###
+
+POST http://localhost:8000/execute
+Content-Type: application/json
+
+{
+    "code": "import time; time.sleep(35)"
+}

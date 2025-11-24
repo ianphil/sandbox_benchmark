@@ -1,0 +1,23 @@
+### Successful execution
+POST http://127.0.0.1:8000/execute
+Content-Type: application/json
+
+{
+  "code": "print('Hello from the sandbox!')"
+}
+
+### Runtime error example
+POST http://127.0.0.1:8000/execute
+Content-Type: application/json
+
+{
+  "code": "raise ValueError('boom')"
+}
+
+### Timeout example
+POST http://127.0.0.1:8000/execute
+Content-Type: application/json
+
+{
+  "code": "import time\nfor _ in range(35):\n    time.sleep(1)\nprint('done')"
+}

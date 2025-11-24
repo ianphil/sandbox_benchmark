@@ -1,0 +1,34 @@
+### Test 1: Successful execution - Simple print statement
+POST http://localhost:8000/execute
+Content-Type: application/json
+
+{
+  "code": "print('Hello from sandbox!')\nprint(2 + 2)"
+}
+
+### Test 2: Error case - Division by zero
+POST http://localhost:8000/execute
+Content-Type: application/json
+
+{
+  "code": "print('Starting...')\nresult = 1 / 0\nprint('This will not print')"
+}
+
+### Test 3: Timeout case - Infinite loop
+POST http://localhost:8000/execute
+Content-Type: application/json
+
+{
+  "code": "import time\nprint('Starting infinite loop...')\nwhile True:\n    time.sleep(1)\n    print('Still running...')"
+}
+
+### Test 4: Multiple operations
+POST http://localhost:8000/execute
+Content-Type: application/json
+
+{
+  "code": "import math\nimport json\n\ndata = {'pi': math.pi, 'e': math.e}\nprint(json.dumps(data, indent=2))"
+}
+
+### Test 5: Check root endpoint
+GET http://localhost:8000/
