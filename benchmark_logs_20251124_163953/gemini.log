@@ -1,0 +1,36 @@
+=========================================
+Agent: Gemini
+Time: Mon Nov 24 16:39:59 EST 2025
+=========================================
+
+Directory: /Users/ianphil/src/sandbox/scripts/../simple_sandbox_gemini
+Command: gemini "$(cat <prompt from benchmark-prompt.md>)" --yolo
+
+----------------------------------------
+Output:
+----------------------------------------
+YOLO mode is enabled. All tool calls will be automatically approved.
+Loaded cached credentials.
+[ERROR] [IDEClient] Failed to connect to IDE companion extension. Please ensure the extension is running. To install the extension, run /ide install.
+Error when talking to Gemini API Full report available at: /var/folders/nf/3x_7fybx2dx7rtxwtzjl60_m0000gn/T/gemini-client-error-Turn.run-sendMessageStream-2025-11-24T21-40-03-424Z.json
+[API Error: [{
+  "error": {
+    "code": 404,
+    "message": "Requested entity was not found.",
+    "errors": [
+      {
+        "message": "Requested entity was not found.",
+        "domain": "global",
+        "reason": "notFound"
+      }
+    ],
+    "status": "NOT_FOUND"
+  }
+}
+]]
+An unexpected critical error occurred:
+[object Object]
+
+----------------------------------------
+✗ Gemini failed with exit code: 1
+=========================================

@@ -6,10 +6,6 @@ __pycache__/
 venv/
 .env
 
-# Benchmark outputs (regenerated on each run)
-benchmark_logs_*/
-evaluations_*/
-
 # OS
 .DS_Store
 
